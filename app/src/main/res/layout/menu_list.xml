@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/food_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/food_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:maxLines="4"
+            android:text="Food_name"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/food_image"
+            app:layout_constraintRight_toLeftOf="@id/food_cost"
+            app:layout_constraintTop_toTopOf="@id/food_image" />
+
+        <TextView
+            android:id="@+id/food_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans"
+            android:text="Rs 250"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/setQuantityButton"
+            app:layout_constraintTop_toTopOf="@id/food_name" />
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/setQuantityButton"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            app:backGroundColor="#26A69A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:textSize="8sp" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/spinnerPromptArray"
+            android:prompt="@string/spinnerPromptPlaceholderText"
+            android:textAlignment="textStart"
+            android:theme="@style/SpinnerTheme"
+            app:layout_constraintBottom_toBottomOf="@id/setQuantityButton"
+            app:layout_constraintLeft_toLeftOf="@id/food_name"
+            app:layout_constraintTop_toTopOf="@id/setQuantityButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

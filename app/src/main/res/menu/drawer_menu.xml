@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:id="@+id/nav_drawer_menu_1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/drawer_pick_place"
+            android:title="Select Location" />
+        <item
+            android:id="@+id/drawer_search_place"
+            android:title="Search Location" />
+    </group>
+    <group
+        android:id="@+id/nav_drawer_menu_2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_about_us"
+            android:title="About us" />
+        <item
+            android:id="@+id/drawer_logout"
+            android:title="Logout" />
+    </group>
+</menu>

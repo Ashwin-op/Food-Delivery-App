@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/orderNameConfirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="8dp"
+        android:text="Item 1"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/orderQuantityConfirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity=""
+        android:layout_margin="8dp"
+        android:text="Quantity 1"
+        android:textSize="15sp" />
+
+</RelativeLayout>
